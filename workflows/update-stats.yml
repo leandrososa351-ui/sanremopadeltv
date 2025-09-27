@@ -3,7 +3,7 @@ name: Update Social Media Stats
 on:
   schedule:
     # Ejecutar todos los días a las 2 AM UTC (que sería 11 PM en Argentina)
-    - cron: '0 2 * * *'
+    - cron: '0 5 * * *'
   workflow_dispatch: # Permite ejecutar manualmente si es necesario
 
 jobs:
