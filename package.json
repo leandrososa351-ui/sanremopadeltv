@@ -1,0 +1,13 @@
+{
+  "name": "san-remo-padel-tv",
+  "version": "1.0.0",
+  "description": "Sitio web de San Remo Padel TV",
+  "main": "index.html",
+  "scripts": {
+    "start": "node .github/scripts/update-stats.js"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "cheerio": "^1.0.0-rc.12"
+  }
+}
