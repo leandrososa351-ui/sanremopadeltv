@@ -7,7 +7,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
         * {
             margin: 0;
@@ -33,7 +32,7 @@
         header {
             background: linear-gradient(135deg, #1a73e8, #0d47a1);
             color: white;
-            padding: 20px 0;
+            padding: 25px 0;
             text-align: center;
             border-radius: 15px;
             margin-bottom: 20px;
@@ -54,7 +53,7 @@
         }
         
         .logo-container {
-            margin: 0 auto 10px;
+            margin: 0 auto 15px;
             position: relative;
             z-index: 2;
             display: flex;
@@ -62,7 +61,7 @@
         }
         
         .logo-container img {
-            max-width: 250px;
+            max-width: 350px;
             width: 100%;
             transition: transform 0.3s;
             filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3));
@@ -73,8 +72,8 @@
         }
         
         h1 {
-            font-size: clamp(28px, 5vw, 42px);
-            margin-bottom: 5px;
+            font-size: clamp(28px, 5vw, 48px);
+            margin-bottom: 10px;
             font-weight: 900;
             position: relative;
             z-index: 2;
@@ -82,9 +81,9 @@
         }
         
         .subtitle {
-            font-size: clamp(16px, 3vw, 20px);
+            font-size: clamp(16px, 3vw, 24px);
             font-weight: 300;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             position: relative;
             z-index: 2;
         }
@@ -92,8 +91,8 @@
         .content-section {
             background-color: white;
             border-radius: 15px;
-            padding: 20px;
-            margin-bottom: 20px;
+            padding: 25px;
+            margin-bottom: 25px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             position: relative;
             overflow: hidden;
@@ -112,7 +111,7 @@
         h2 {
             color: #1a73e8;
             font-size: clamp(24px, 4vw, 32px);
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             padding-bottom: 10px;
             position: relative;
         }
@@ -131,15 +130,15 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
-            margin: 20px 0;
+            margin: 25px 0;
         }
         
         .creator-card {
             width: 100%;
             background: linear-gradient(135deg, #f5f9ff, #e6f2ff);
             border-radius: 15px;
-            padding: 20px;
-            margin-bottom: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
             text-align: center;
             box-shadow: 0 4px 15px rgba(0,0,0,0.08);
             transition: transform 0.3s, box-shadow 0.3s;
@@ -166,7 +165,7 @@
         .creator-card h3 {
             color: #0d47a1;
             font-size: clamp(20px, 3.5vw, 24px);
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             position: relative;
         }
         
@@ -179,14 +178,14 @@
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
-            margin: 20px 0;
+            margin: 25px 0;
         }
         
         .stat-item {
             text-align: center;
-            margin: 8px;
+            margin: 10px;
             background-color: #f5f9ff;
-            padding: 12px;
+            padding: 15px;
             border-radius: 15px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.05);
             transition: transform 0.3s;
@@ -199,7 +198,7 @@
         }
         
         .stat-number {
-            font-size: clamp(28px, 4.5vw, 36px);
+            font-size: clamp(32px, 5vw, 48px);
             font-weight: 700;
             color: #1a73e8;
             margin-bottom: 5px;
@@ -207,11 +206,6 @@
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-        }
-        
-        .stat-number.loading {
-            font-size: clamp(14px, 2vw, 16px);
-            color: #888;
         }
         
         .stat-label {
@@ -223,12 +217,12 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            margin: 20px 0;
+            margin: 25px 0;
         }
         
         .gallery-item {
             width: 100%;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -266,15 +260,15 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            margin: 20px 0;
-            gap: 15px;
+            margin: 25px 0;
+            gap: 20px;
         }
         
         .social-link {
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 15px;
+            padding: 20px;
             background: linear-gradient(135deg, #f5f9ff, #e6f2ff);
             color: #333;
             text-decoration: none;
@@ -331,20 +325,14 @@
         .social-link .stat-number {
             font-weight: 700;
             color: #1a73e8;
-            font-size: clamp(22px, 3.5vw, 28px);
-        }
-        
-        .social-link .stat-number.loading {
-            font-size: 12px;
-            color: #888;
         }
         
         .total-views {
             background: linear-gradient(135deg, #1a73e8, #0d47a1);
             color: white;
             border-radius: 15px;
-            padding: 15px;
-            margin: 20px 0;
+            padding: 20px;
+            margin: 25px 0;
             text-align: center;
             box-shadow: 0 4px 15px rgba(0,0,0,0.15);
         }
@@ -355,43 +343,22 @@
         }
         
         .total-views .number {
-            font-size: clamp(28px, 4.5vw, 36px);
+            font-size: clamp(32px, 6vw, 48px);
             font-weight: 900;
         }
         
-        .total-views .number.loading {
-            font-size: 16px;
-            color: rgba(255, 255, 255, 0.8);
-        }
-        
-        .loading-spinner {
-            display: inline-block;
-            width: 16px;
-            height: 16px;
-            border: 2px solid rgba(136, 136, 136, 0.3);
-            border-radius: 50%;
-            border-top-color: #888;
-            animation: spin 1s ease-in-out infinite;
-            vertical-align: middle;
-            margin-right: 5px;
-        }
-        
-        .total-views .loading-spinner {
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            border-top-color: #fff;
-        }
-        
-        @keyframes spin {
-            to { transform: rotate(360deg); }
+        .loading-text {
+            font-size: 14px;
+            color: #888;
         }
         
         footer {
             text-align: center;
-            padding: 15px;
+            padding: 20px;
             background: linear-gradient(135deg, #1a73e8, #0d47a1);
             color: white;
             border-radius: 15px;
-            margin-top: 20px;
+            margin-top: 25px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
         
@@ -441,7 +408,7 @@
             }
             
             .logo-container img {
-                max-width: 300px;
+                max-width: 350px;
             }
         }
         
@@ -452,16 +419,16 @@
             
             header {
                 padding: 25px 0;
-                margin-bottom: 25px;
+                margin-bottom: 30px;
             }
             
             .content-section {
-                padding: 25px;
-                margin-bottom: 25px;
+                padding: 30px;
+                margin-bottom: 30px;
             }
             
             .creators {
-                margin: 25px 0;
+                margin: 30px 0;
             }
             
             .creator-card {
@@ -471,7 +438,7 @@
             }
             
             .stats {
-                margin: 25px 0;
+                margin: 30px 0;
             }
             
             .stat-item {
@@ -480,7 +447,7 @@
             }
             
             .gallery {
-                margin: 25px 0;
+                margin: 30px 0;
             }
             
             .gallery-item {
@@ -488,7 +455,7 @@
             }
             
             .social-links {
-                margin: 25px 0;
+                margin: 30px 0;
             }
             
             .social-link {
@@ -497,7 +464,7 @@
             
             .total-views {
                 padding: 20px;
-                margin: 25px 0;
+                margin: 30px 0;
             }
         }
         
@@ -545,21 +512,15 @@
             <h2>Estadísticas del Canal</h2>
             <div class="stats">
                 <div class="stat-item">
-                    <div class="stat-number loading" id="youtube-subs">
-                        <span class="loading-spinner"></span>Cargando...
-                    </div>
+                    <div class="stat-number" id="youtube-subs">8.93K</div>
                     <div class="stat-label">Suscriptores</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number loading" id="youtube-videos">
-                        <span class="loading-spinner"></span>Cargando...
-                    </div>
+                    <div class="stat-number" id="youtube-videos">525</div>
                     <div class="stat-label">Videos</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number loading" id="youtube-views">
-                        <span class="loading-spinner"></span>Cargando...
-                    </div>
+                    <div class="stat-number" id="youtube-views">2.8M</div>
                     <div class="stat-label">Visualizaciones</div>
                 </div>
                 <div class="stat-item">
@@ -608,45 +569,31 @@
                     <i class="fab fa-youtube"></i>
                     <div class="platform-name">YouTube</div>
                     <div class="stats">
-                        <div class="stat"><span class="stat-number loading" id="youtube-subs-social">
-                            <span class="loading-spinner"></span>Cargando...
-                        </span> suscriptores</div>
-                        <div class="stat"><span class="stat-number loading" id="youtube-views-social">
-                            <span class="loading-spinner"></span>Cargando...
-                        </span> visualizaciones</div>
+                        <div class="stat"><span class="stat-number" id="youtube-subs-social">8.93K</span> suscriptores</div>
+                        <div class="stat"><span class="stat-number" id="youtube-views-social">2.8M</span> visualizaciones</div>
                     </div>
                 </a>
                 <a href="https://www.instagram.com/sanremopadeltv" class="social-link" target="_blank">
                     <i class="fab fa-instagram"></i>
                     <div class="platform-name">Instagram</div>
                     <div class="stats">
-                        <div class="stat"><span class="stat-number loading" id="instagram-followers">
-                            <span class="loading-spinner"></span>Cargando...
-                        </span> seguidores</div>
-                        <div class="stat"><span class="stat-number loading" id="instagram-views">
-                            <span class="loading-spinner"></span>Cargando...
-                        </span> visualizaciones</div>
+                        <div class="stat"><span class="stat-number" id="instagram-followers">13K</span> seguidores</div>
+                        <div class="stat"><span class="stat-number" id="instagram-views">4.5M</span> visualizaciones</div>
                     </div>
                 </a>
                 <a href="https://www.tiktok.com/@sanremopadeltv" class="social-link" target="_blank">
                     <i class="fab fa-tiktok"></i>
                     <div class="platform-name">TikTok</div>
                     <div class="stats">
-                        <div class="stat"><span class="stat-number loading" id="tiktok-followers">
-                            <span class="loading-spinner"></span>Cargando...
-                        </span> seguidores</div>
-                        <div class="stat"><span class="stat-number loading" id="tiktok-views">
-                            <span class="loading-spinner"></span>Cargando...
-                        </span> visualizaciones</div>
+                        <div class="stat"><span class="stat-number" id="tiktok-followers">5.1K</span> seguidores</div>
+                        <div class="stat"><span class="stat-number" id="tiktok-views">850K</span> visualizaciones</div>
                     </div>
                 </a>
             </div>
             
             <div class="total-views">
                 <h3>Total de Visualizaciones en Todas las Plataformas</h3>
-                <div class="number loading" id="total-views">
-                    <span class="loading-spinner"></span>Cargando...
-                </div>
+                <div class="number" id="total-views">8.15M</div>
             </div>
         </section>
         
@@ -662,286 +609,41 @@
     </div>
 
     <script>
-        // Función para obtener estadísticas de YouTube
-        async function getYouTubeStats() {
+        // Función para cargar estadísticas desde el archivo JSON
+        async function loadStatsFromJSON() {
             try {
-                // Usamos un proxy CORS para evitar problemas de cross-origin
-                const proxyUrl = 'https://api.allorigins.win/get?url=';
-                const youtubeUrl = encodeURIComponent('https://www.youtube.com/c/SANREMOPADELTV/about');
-                
-                const response = await fetch(proxyUrl + youtubeUrl);
+                const response = await fetch('data/stats.json');
                 const data = await response.json();
                 
-                // Parseamos el HTML de la página de YouTube
-                const parser = new DOMParser();
-                const htmlDocument = parser.parseFromString(data.contents, 'text/html');
+                // Actualizar la UI con los datos del JSON
+                document.getElementById('youtube-subs').textContent = formatNumber(data.youtube.subscribers);
+                document.getElementById('youtube-subs-social').textContent = formatNumber(data.youtube.subscribers);
+                document.getElementById('youtube-videos').textContent = data.youtube.videos;
+                document.getElementById('youtube-views').textContent = formatNumber(data.youtube.views);
+                document.getElementById('youtube-views-social').textContent = formatNumber(data.youtube.views);
+                document.getElementById('instagram-followers').textContent = formatNumber(data.instagram.followers);
+                document.getElementById('instagram-views').textContent = formatNumber(data.instagram.views);
+                document.getElementById('tiktok-followers').textContent = formatNumber(data.tiktok.followers);
+                document.getElementById('tiktok-views').textContent = formatNumber(data.tiktok.views);
+                document.getElementById('total-views').textContent = formatNumber(data.totalViews);
                 
-                // Buscamos las estadísticas en el HTML
-                let subscribers = 0;
-                let views = 0;
-                let videos = 0;
-                
-                // Intentamos extraer los datos de los elementos del DOM
-                const statsElements = htmlDocument.querySelectorAll('.about-stat');
-                
-                if (statsElements.length > 0) {
-                    subscribers = parseSocialNumber(statsElements[0]?.innerText || "0");
-                    views = parseSocialNumber(statsElements[1]?.innerText || "0");
-                    videos = parseSocialNumber(statsElements[2]?.innerText || "0");
-                }
-                
-                // Si no encontramos los datos con el método anterior, intentamos con otros métodos
-                if (subscribers === 0 || views === 0 || videos === 0) {
-                    // Buscamos en los scripts de la página
-                    const scripts = htmlDocument.querySelectorAll('script');
-                    for (const script of scripts) {
-                        if (script.innerText.includes('subscriberCount') || script.innerText.includes('viewCount')) {
-                            try {
-                                // Extraemos los números usando expresiones regulares
-                                const subscribersMatch = script.innerText.match(/"subscriberCount":\s*"([\d.]+[K|M]?)"}/);
-                                const viewsMatch = script.innerText.match(/"viewCount":\s*"([\d.]+[K|M]?)"}/);
-                                const videosMatch = script.innerText.match(/"videoCount":\s*"([\d.]+)"}/);
-                                
-                                if (subscribersMatch) subscribers = parseSocialNumber(subscribersMatch[1]);
-                                if (viewsMatch) views = parseSocialNumber(viewsMatch[1]);
-                                if (videosMatch) videos = parseInt(videosMatch[1]) || 0;
-                                
-                                if (subscribers > 0 && views > 0 && videos > 0) break;
-                            } catch (e) {
-                                console.error("Error parsing YouTube JSON:", e);
-                            }
-                        }
-                    }
-                }
-                
-                // Si aún no tenemos datos, usamos valores predeterminados
-                if (subscribers === 0) subscribers = 8930;
-                if (views === 0) views = 2800000;
-                if (videos === 0) videos = 525;
-                
-                // Actualizamos la UI con los datos obtenidos
-                updateStatElement('youtube-subs', formatNumber(subscribers));
-                updateStatElement('youtube-subs-social', formatNumber(subscribers));
-                updateStatElement('youtube-videos', videos.toString());
-                updateStatElement('youtube-views', formatNumber(views));
-                updateStatElement('youtube-views-social', formatNumber(views));
-                
-                return { subscribers, views, videos };
+                return data;
             } catch (error) {
-                console.error('Error al obtener estadísticas de YouTube:', error);
+                console.error('Error al cargar estadísticas desde JSON:', error);
                 
-                // En caso de error, mostramos valores predeterminados
-                updateStatElement('youtube-subs', '8.93K');
-                updateStatElement('youtube-subs-social', '8.93K');
-                updateStatElement('youtube-videos', '525');
-                updateStatElement('youtube-views', '2.8M');
-                updateStatElement('youtube-views-social', '2.8M');
+                // Mostrar valores predeterminados si no se pueden cargar los datos
+                document.getElementById('youtube-subs').textContent = '8.93K';
+                document.getElementById('youtube-subs-social').textContent = '8.93K';
+                document.getElementById('youtube-videos').textContent = '525';
+                document.getElementById('youtube-views').textContent = '2.8M';
+                document.getElementById('youtube-views-social').textContent = '2.8M';
+                document.getElementById('instagram-followers').textContent = '13K';
+                document.getElementById('instagram-views').textContent = '4.5M';
+                document.getElementById('tiktok-followers').textContent = '5.1K';
+                document.getElementById('tiktok-views').textContent = '850K';
+                document.getElementById('total-views').textContent = '8.15M';
                 
-                return { subscribers: 8930, views: 2800000, videos: 525 };
-            }
-        }
-        
-        // Función para obtener estadísticas de Instagram
-        async function getInstagramStats() {
-            try {
-                // Usamos un proxy CORS para evitar problemas de cross-origin
-                const proxyUrl = 'https://api.allorigins.win/get?url=';
-                const instagramUrl = encodeURIComponent('https://www.instagram.com/sanremopadeltv/');
-                
-                const response = await fetch(proxyUrl + instagramUrl);
-                const data = await response.json();
-                
-                // Parseamos el HTML de la página de Instagram
-                const parser = new DOMParser();
-                const htmlDocument = parser.parseFromString(data.contents, 'text/html');
-                
-                // Buscamos las estadísticas en el HTML
-                let followers = 0;
-                let views = 0;
-                
-                // Intentamos extraer los datos de los scripts de la página
-                const scripts = htmlDocument.querySelectorAll('script');
-                for (const script of scripts) {
-                    if (script.innerText.includes('edge_followed_by') || script.innerText.includes('edge_owner_to_timeline_media')) {
-                        try {
-                            // Buscamos el objeto JSON que contiene las estadísticas
-                            const jsonMatch = script.innerText.match(/window\._sharedData\s*=\s*({.*?});/);
-                            if (jsonMatch) {
-                                const jsonData = JSON.parse(jsonMatch[1]);
-                                
-                                // Navegamos por la estructura del objeto para encontrar las estadísticas
-                                const userPath = jsonData.entry_data?.ProfilePage?.[0]?.graphql?.user;
-                                if (userPath) {
-                                    followers = userPath.edge_followed_by.count || 0;
-                                    
-                                    // Para obtener las visualizaciones, necesitamos sumar las de todos los videos
-                                    const mediaEdges = userPath.edge_owner_to_timeline_media.edges;
-                                    if (mediaEdges) {
-                                        views = 0;
-                                        for (const edge of mediaEdges) {
-                                            if (edge.node && edge.node.video_view_count) {
-                                                views += edge.node.video_view_count;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        } catch (e) {
-                            console.error("Error parsing Instagram JSON:", e);
-                        }
-                    }
-                }
-                
-                // Si no encontramos los datos con el método anterior, intentamos con otros métodos
-                if (followers === 0 || views === 0) {
-                    // Buscamos en los elementos HTML que contienen las estadísticas
-                    const statsElements = htmlDocument.querySelectorAll('meta[property="og:description"]');
-                    
-                    if (statsElements.length > 0) {
-                        const content = statsElements[0].getAttribute('content') || '';
-                        const followersMatch = content.match(/([\d.]+[K|M]?)\s*(Seguidores|Followers)/i);
-                        
-                        if (followersMatch) {
-                            followers = parseSocialNumber(followersMatch[1]);
-                        }
-                    }
-                    
-                    // Estimamos las visualizaciones basándonos en los seguidores
-                    if (followers > 0 && views === 0) {
-                        views = followers * 350; // Estimación de 350 visualizaciones por seguidor
-                    }
-                }
-                
-                // Si aún no tenemos datos, usamos valores predeterminados
-                if (followers === 0) followers = 13000;
-                if (views === 0) views = 4500000;
-                
-                // Actualizamos la UI con los datos obtenidos
-                updateStatElement('instagram-followers', formatNumber(followers));
-                updateStatElement('instagram-views', formatNumber(views));
-                
-                return { followers, views };
-            } catch (error) {
-                console.error('Error al obtener estadísticas de Instagram:', error);
-                
-                // En caso de error, mostramos valores predeterminados
-                updateStatElement('instagram-followers', '13K');
-                updateStatElement('instagram-views', '4.5M');
-                
-                return { followers: 13000, views: 4500000 };
-            }
-        }
-        
-        // Función para obtener estadísticas de TikTok
-        async function getTikTokStats() {
-            try {
-                // Usamos un proxy CORS para evitar problemas de cross-origin
-                const proxyUrl = 'https://api.allorigins.win/get?url=';
-                const tiktokUrl = encodeURIComponent('https://www.tiktok.com/@sanremopadeltv');
-                
-                const response = await fetch(proxyUrl + tiktokUrl);
-                const data = await response.json();
-                
-                // Parseamos el HTML de la página de TikTok
-                const parser = new DOMParser();
-                const htmlDocument = parser.parseFromString(data.contents, 'text/html');
-                
-                // Buscamos las estadísticas en el HTML
-                // Nota: Los selectores pueden cambiar si TikTok actualiza su estructura
-                let followers = 0;
-                let views = 0;
-                
-                // Intentamos extraer los datos del script que contiene las estadísticas
-                const scripts = htmlDocument.querySelectorAll('script');
-                for (const script of scripts) {
-                    if (script.innerText.includes('stats')) {
-                        try {
-                            // Buscamos el objeto JSON que contiene las estadísticas
-                            const jsonMatch = script.innerText.match(/window\['__INITIAL_STATE__']\s*=\s*({.*?});/);
-                            if (jsonMatch) {
-                                const jsonData = JSON.parse(jsonMatch[1]);
-                                
-                                // Navegamos por la estructura del objeto para encontrar las estadísticas
-                                const userPath = jsonData.UserModule?.users?.[Object.keys(jsonData.UserModule.users)[0]];
-                                if (userPath) {
-                                    followers = userPath.followingCount || 0;
-                                    views = userPath.heartCount || 0; // Este es el dato de "me gusta"
-                                    
-                                    // Para obtener las visualizaciones, necesitamos sumar las de todos los videos
-                                    const videoList = userPath.itemList;
-                                    if (videoList) {
-                                        views = 0;
-                                        for (const videoId of Object.keys(videoList)) {
-                                            if (videoList[videoId] && videoList[videoId].stats) {
-                                                views += videoList[videoId].stats.playCount || 0;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        } catch (e) {
-                            console.error("Error parsing TikTok JSON:", e);
-                        }
-                    }
-                }
-                
-                // Si no encontramos los datos con el método anterior, intentamos con otros métodos
-                if (followers === 0 || views === 0) {
-                    // Buscamos en los elementos HTML que contienen las estadísticas
-                    const statsElements = htmlDocument.querySelectorAll('.count, .number, strong');
-                    
-                    statsElements.forEach(element => {
-                        const text = element.innerText || '';
-                        if (text.includes('seguidores') || text.includes('followers')) {
-                            followers = parseSocialNumber(text);
-                        } else if (text.includes('visualizaciones') || text.includes('views')) {
-                            views = parseSocialNumber(text);
-                        }
-                    });
-                }
-                
-                // Si aún no tenemos datos, usamos valores predeterminados
-                if (followers === 0) followers = 5100;
-                if (views === 0) views = 850000; // Estimación de visualizaciones
-                
-                // Actualizamos la UI con los datos obtenidos
-                updateStatElement('tiktok-followers', formatNumber(followers));
-                updateStatElement('tiktok-views', formatNumber(views));
-                
-                return { followers, views };
-            } catch (error) {
-                console.error('Error al obtener estadísticas de TikTok:', error);
-                
-                // En caso de error, mostramos valores predeterminados
-                updateStatElement('tiktok-followers', '5.1K');
-                updateStatElement('tiktok-views', '850K');
-                
-                return { followers: 5100, views: 850000 };
-            }
-        }
-        
-        // Función para actualizar un elemento de estadística
-        function updateStatElement(elementId, value) {
-            const element = document.getElementById(elementId);
-            if (element) {
-                element.textContent = value;
-                element.classList.remove('loading');
-            }
-        }
-        
-        // Función para convertir números como "1.2K" o "3.5M" a números enteros
-        function parseSocialNumber(str) {
-            if (!str) return 0;
-            
-            // Limpiamos la cadena
-            str = str.trim().replace(/[^\d.KM]/g, '');
-            
-            if (str.includes('K')) {
-                return parseFloat(str) * 1000;
-            } else if (str.includes('M')) {
-                return parseFloat(str) * 1000000;
-            } else {
-                return parseInt(str) || 0;
+                return null;
             }
         }
         
@@ -956,26 +658,10 @@
             }
         }
         
-        // Función para actualizar el total de visualizaciones
-        function updateTotalViews(youtubeViews, instagramViews, tiktokViews) {
-            const totalViews = youtubeViews + instagramViews + tiktokViews;
-            updateStatElement('total-views', formatNumber(totalViews));
-        }
-        
-        // Función principal para obtener todas las estadísticas
-        async function getAllStats() {
-            // Obtenemos las estadísticas de todas las plataformas
-            const youtubeStats = await getYouTubeStats();
-            const instagramStats = await getInstagramStats();
-            const tiktokStats = await getTikTokStats();
-            
-            // Actualizamos el total de visualizaciones
-            updateTotalViews(youtubeStats.views, instagramStats.views, tiktokStats.views);
-        }
-        
-        // Ejecutamos la función cuando la página carga
-        document.addEventListener('DOMContentLoaded', getAllStats);
+        // Cargar las estadísticas cuando la página se carga
+        document.addEventListener('DOMContentLoaded', loadStatsFromJSON);
     </script>
 </body>
 </html>
+
 
