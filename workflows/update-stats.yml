@@ -1,0 +1,36 @@
+name: Update Social Media Stats
+
+on:
+  schedule:
+    # Ejecutar todos los días a las 2 AM UTC (que sería 11 PM en Argentina)
+    - cron: '0 2 * * *'
+  workflow_dispatch: # Permite ejecutar manualmente si es necesario
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        
+    - name: Install dependencies
+      run: npm install axios cheerio
+      
+    - name: Update stats
+      run: node .github/scripts/update-stats.js
+      
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add data/stats.json
+        git diff --quiet && git diff --staged --quiet || git commit -m "Update social media stats $(date '+%Y-%m-%d %H:%M:%S')"
+        git push
